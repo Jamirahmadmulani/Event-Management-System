@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Edit Event</h2>
+
+<form method="POST">
+    <input type="text" name="name" value="{{ event.name }}" class="form-control mb-2" required>
+    <input type="date" name="date" value="{{ event.date }}" class="form-control mb-2" required>
+    <input type="text" name="location" value="{{ event.location }}" class="form-control mb-2" required>
+    <textarea name="description" class="form-control mb-2">{{ event.description }}</textarea>
+    <button class="btn btn-primary">Update</button>
+</form>
+
+{% endblock %}

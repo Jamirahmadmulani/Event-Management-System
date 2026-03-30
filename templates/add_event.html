@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Add Event</h2>
+
+<form method="POST">
+    <input type="text" name="name" class="form-control mb-2" placeholder="Event Name" required>
+    <input type="date" name="date" class="form-control mb-2" required>
+    <input type="text" name="location" class="form-control mb-2" placeholder="Location" required>
+    <textarea name="description" class="form-control mb-2" placeholder="Description"></textarea>
+    <button class="btn btn-success">Add Event</button>
+</form>
+
+{% endblock %}

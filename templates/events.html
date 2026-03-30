@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>All Events</h2>
+<a href="/add" class="btn btn-success mb-3">Add New Event</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Action</th>
+    </tr>
+
+    {% for event in events %}
+    <tr>
+        <td>{{ event.id }}</td>
+        <td>{{ event.name }}</td>
+        <td>{{ event.date }}</td>
+        <td>{{ event.location }}</td>
+        <td>
+            <a href="/edit/{{ event.id }}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/delete/{{ event.id }}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
