@@ -8,3 +8,13 @@ class Event(db.Model):
     date = db.Column(db.String(50), nullable=False)
     location = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text, nullable=True)
+
+
+
+class User(db.Model):
+
+    id = db.Column(db.Integer, primary_key=True)
+
+    email = db.Column(db.String(100), unique=True)
+
+    password = db.Column(db.String(255))
